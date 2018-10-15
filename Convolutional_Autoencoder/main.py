@@ -75,35 +75,35 @@ device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 model = model.to(device)
 
 # Training Loop
-# numepochs = 200
-# for epoch in range(0, numepochs):
-#     running_loss = 0.0
-#     for i, data in enumerate(dataloader):
-#         img, _ = data
-#         img = img.to(device)
+ numepochs = 200
+ for epoch in range(0, numepochs):
+     running_loss = 0.0
+     for i, data in enumerate(dataloader):
+         img, _ = data
+         img = img.to(device)
 
-#         # get outputs
-#         y, _ = model(img)
+         # get outputs
+         y, _ = model(img)
 
-#         # loss function
-#         loss = criterion(img, y)
+         # loss function
+         loss = criterion(img, y)
 
-#         # backward
-#         loss.backward()
-#         optimizer.step()
+         # backward
+        loss.backward()
+        optimizer.step()
 
-#         running_loss += loss.item()
+        running_loss += loss.item()
 
-#         if i % 100 == 99:  # print every 100 mini-batches
-#             print('[%d, %5d] loss: %.3f' %
-#                   (epoch + 1, i + 1, running_loss/100))
-#             running_loss = 0.0
+        if i % 100 == 99:  # print every 100 mini-batches
+            print('[%d, %5d] loss: %.3f' %
+                  (epoch + 1, i + 1, running_loss/100))
+            running_loss = 0.0
 
 
-# # save the model
-# torch.save({'epoch': epoch,
-#             'model_state_dict': model.state_dict(),
-#             }, './model.pth')
+# save the model
+torch.save({'epoch': epoch,
+            'model_state_dict': model.state_dict(),
+            }, './model.pth')
             
 
 # testing with a sample image
