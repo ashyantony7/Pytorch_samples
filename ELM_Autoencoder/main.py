@@ -51,11 +51,6 @@ def image(img):
     return img.numpy()
 
 
-dataiter = iter(dataloader)
-img_test_set, _ = dataiter.next()
-img1 = img_test_set[0, 0, :, :]  # fetch an image
-
-
 # testing with a sample image
 dataiter = iter(dataloader)
 img_test_set, _ = dataiter.next()
