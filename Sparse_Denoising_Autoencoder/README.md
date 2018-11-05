@@ -12,6 +12,7 @@
 The algorithm is trained with 1000 epochs and with embedeed length of 14 and the results are displayed below
 
 ![alt text](https://raw.githubusercontent.com/ashyantony7/Pytorch_Samples/master/images/SDSAE.png)
+
 (i) First row - Original Images (ii) Second row - Decoded images
 
 ### References
