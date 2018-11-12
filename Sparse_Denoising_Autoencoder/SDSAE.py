@@ -1,8 +1,5 @@
 import torch
 from torch import nn
-from torchvision.datasets import MNIST
-from torch.utils.data import DataLoader
-import torchvision.transforms as transforms
 
 
 def noise(image, level=0.05):
